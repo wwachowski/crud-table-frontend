@@ -1,0 +1,11 @@
+<form [formGroup]="userForm" (submit)="onSubmit()">
+    <div class="flex-row">
+        <div class="w-50 ctn-1">
+            <label>Order's title</label>
+            <input type="text" formControlName="name">
+            <label for="">Client name</label>
+            <input type="text" formControlName="password">
+        </div>
+    </div>
+</form>
+<button (click)="onSubmit()">Apply</button>

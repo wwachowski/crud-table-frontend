@@ -1,0 +1,45 @@
+.table-wrapper {
+    max-width: 80%;
+}
+
+.table-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.table-footer>button {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    padding: .33rem 1.8rem;
+}
+
+.table-header {
+    background-color: rgb(237, 237, 237);
+    margin-top: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.table-header h1 {
+    margin-left: 5rem;
+}
+
+.table-buttons-wrapper>* {
+    margin-right: 2rem;
+}
+
+i {
+    position: relative;
+    margin-top: 17px;
+}
+
+i:hover {
+    cursor: pointer;
+}

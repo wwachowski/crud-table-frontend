@@ -1,0 +1,40 @@
+<div class="table-wrapper">
+    <div class="table-header">
+        <div><h1>CRUD table of users</h1></div>
+        <div class="table-buttons-wrapper">
+            <div><i class="fa-solid fa-trash fa-xl" (click)="deleteUsers()"></i></div>
+            <div><i class="fa-solid fa-lock-open fa-xl" (click)="unBlockUsers()"></i></div>
+            <button type="button" class="btn btn-danger" (click)="blockUsers()">block</button>
+        </div>
+    </div>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox" [checked]="areAllCheckBoxChecked()" (change)="checkAllCheckBox($event)"></th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Last Login Time</th>
+                <th>Registration Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="users.length==0">
+                <td colSpan="7"><b>NO RECORDS FOUND</b></td>
+            </tr>
+            <tr *ngFor="let user of users; let i = index">
+                <td><input type="checkbox" value="{{user.id}}" [(ngModel)]="users[i].checked"></td>
+                <th>{{user.id}}</th>
+                <td>{{user.email}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.lastLogin | date: 'y MMMM d h:mm:ss a' | nullToValue: 'Never'}}</td>
+                <td>{{user.registrationTime | date: 'y MMMM d h:mm:ss a'}}</td>
+                <td>{{user.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="table-footer">
+        <button type="button" class="btn btn-success" (click)="logOut()">Log Out</button>
+    </div>
+</div>
