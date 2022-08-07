@@ -12,14 +12,12 @@ import { AuthHeaderInterceptor } from './services/auth-header.interceptor';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { UserFormComponent } from './components/user-form/user-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
-    UserFormComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
