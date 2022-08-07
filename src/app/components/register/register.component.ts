@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
       password: this.userForm.value.password
     }).subscribe({
       error: (err) => {
-        this.errorAlert='User already exists';
+        this.errorAlert='An error occured';
       },
       next: (res: boolean) => {
         res ? this.router.navigate(['/login']) : this.errorAlert='Some error occured';
